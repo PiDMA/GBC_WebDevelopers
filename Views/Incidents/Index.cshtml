@@ -1,0 +1,73 @@
+﻿@model IEnumerable<GBC_WebDevelopers.Models.Incidents>
+
+@{
+    ViewData["Title"] = "Incident Manager";
+}
+
+<h1>Incident Manager</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Technician)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOpened)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateClosed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Technician)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOpened)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateClosed)
+            </td>
+            <td>
+                <div class="btn-group">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary"><i class="bi bi-pencil-square">&nbsp; Edit</i></a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-secondary"><i class="bi bi-trash">&nbsp; Delete</i></a>
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add Incident</a>
+</p>

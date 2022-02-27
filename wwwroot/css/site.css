@@ -1,0 +1,103 @@
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+body {
+    margin-bottom: 60px;
+    padding: 1em;
+    font-family: Helvetica, sans-serif;
+}
+
+
+h1 {
+    margin-top: 0;
+    color: #6c7ae0;
+}
+
+.btn {
+    width: 12rem;
+    background-color: #6c7ae0;
+}
+.btn:hover {
+    border-color: #c4d3f6;
+    background-color: #c4d3f6;
+}
+
+
+.btn-secondary{
+    height: 2.2em;  
+    width: 50px;
+    color: white;
+}
+
+.btn-group{
+    display:flex;
+}
+
+.nav-link, .navbar-custom {
+    margin-top: 0;
+    background-color: #6c7ae0;
+    color: white !important;
+}
+
+.nav-link:hover {
+    background-color: #C4D3F6;
+}
+
+
+.thead {
+    color: #FFFFFF;
+    background-color: #6c7ae0;
+}
+
+
+.delete {
+    color: white;
+    background-color: #DE3027;
+    height: 2.2em;
+    width: 100px;
+}
+
+.delete:hover {
+    background-color: #C7150C;
+}
+
+.save {
+    color: white;
+    margin-top:10px;
+    background-color: #3ED745;
+    height: 2.2em;
+    width: 100px;
+}
+
+.save:hover{
+    background-color: #5EF765;
+}
+    
+.cancel{
+    width: 100px;
+}
+
+.home-group{
+    display: flex;
+    justify-content: space-between;
+    align-content:center;
+    gap: 20px;
+}
+
+.home-item{
+    width: 15em;
+    height: 5em;
+    text-align:center;
+    border:none;
+    padding: 20px;
+}
